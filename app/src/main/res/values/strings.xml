@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ActividadGUI</string>
+    <string name="titulo">Calcular Watts</string>
+    <string name="autor">Por : Dumitru Alexandru Stroesteanu</string>
+    <string name="TipoDeUso">Tipo de Uso</string>
+    <string name="procesador">Procesador</string>
+    <string name="perifericos">Perifericos</string>
+    <string name="tipoRaton">Tipo de Raton</string>
+    <string name="refLiquida">Kit de refrigeracion liquida</string>
+    <string name="leds">Leds</string>
+    <string name="gbVram">GB Vram Grafica</string>
+</resources>

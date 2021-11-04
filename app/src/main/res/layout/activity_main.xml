@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0C1D3A"
+    android:onClick="Calcular"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/autor"
+        android:textColor="#89A3F1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.006" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="44dp"
+        android:layout_height="38dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:drawable/ic_lock_idle_low_battery" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="44dp"
+        android:layout_height="38dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.4"
+        app:srcCompat="@android:drawable/ic_lock_idle_low_battery" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo"
+        android:textColor="#0048FF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01" />
+
+    <EditText
+        android:id="@+id/txtDiasSemana"
+        android:layout_width="120dp"
+        android:layout_height="26dp"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:foregroundTint="#00FFFFFF"
+        android:inputType="textPersonName"
+        android:maxLength="1"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.742"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.095" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Horas al dia"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/txtHorasDia"
+        app:layout_constraintEnd_toStartOf="@+id/txtHorasDia"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtHorasDia"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dias a la semana"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/txtDiasSemana"
+        app:layout_constraintEnd_toStartOf="@+id/txtDiasSemana"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView4"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/txtHorasDia"
+        android:layout_width="120dp"
+        android:layout_height="26dp"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:foregroundTint="#00FFFFFF"
+        android:inputType="textPersonName"
+        android:maxLength="2"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtDiasSemana"
+        app:layout_constraintEnd_toEndOf="@+id/txtDiasSemana"
+        app:layout_constraintHorizontal_bias="0.697"
+        app:layout_constraintStart_toStartOf="@+id/txtDiasSemana"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.47" />
+
+    <Button
+        android:id="@+id/btnLimpiar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        android:onClick="Limpar"
+        android:text="LIMPIAR"
+        android:textColor="#2054EC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/chkbLeds"
+        app:layout_constraintHorizontal_bias="0.297"
+        app:layout_constraintStart_toStartOf="@+id/chkbLeds"
+        app:layout_constraintTop_toBottomOf="@+id/chkbLeds"
+        app:layout_constraintVertical_bias="0.134" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="113dp"
+        android:layout_height="46dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="CALCULAR"
+        android:textColor="#095CED"
+        app:layout_constraintBottom_toBottomOf="@+id/btnLimpiar"
+        app:layout_constraintEnd_toStartOf="@+id/btnLimpiar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnLimpiar" />
+
+    <CheckBox
+        android:id="@+id/chkbLeds"
+        android:layout_width="132dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/leds"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/rgroupProcesador"
+        app:layout_constraintTop_toBottomOf="@+id/rgroupProcesador"
+        app:layout_constraintVertical_bias="0.082" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TipoDeUso"
+        android:textColor="#0048FF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rgroupUso"
+        app:layout_constraintEnd_toStartOf="@+id/rgroupUso"
+        app:layout_constraintHorizontal_bias="0.235"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/rgroupUso" />
+
+    <RadioGroup
+        android:id="@+id/rgroupProcesador"
+        android:layout_width="92dp"
+        android:layout_height="73dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgroupUso"
+        app:layout_constraintVertical_bias="0.054">
+
+        <RadioButton
+            android:id="@+id/rbnIntel"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:text="Intel"
+            android:textColor="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/rbnAmd"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:text="AMD"
+            android:textColor="#FFFFFF" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/procesador"
+        android:textColor="#0048FF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rgroupProcesador"
+        app:layout_constraintEnd_toStartOf="@+id/rgroupProcesador"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rgroupProcesador" />
+
+    <RadioGroup
+        android:id="@+id/rgroupUso"
+        android:layout_width="116dp"
+        android:layout_height="82dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toStartOf="@+id/txtDiasSemana"
+        app:layout_constraintTop_toBottomOf="@+id/txtDiasSemana"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/rbnGaming"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:text="Gaming"
+            android:textColor="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/rbnOficina"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Oficina"
+            android:textColor="#FFFFFF" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/chkbRefrigeracion"
+        android:layout_width="149dp"
+        android:layout_height="36dp"
+        android:text="@string/refLiquida"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/chkbLeds"
+        app:layout_constraintEnd_toStartOf="@+id/chkbLeds"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/chkbLeds" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Watios"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.278"
+        app:layout_constraintStart_toStartOf="@+id/btnLimpiar"
+        app:layout_constraintTop_toBottomOf="@+id/btnLimpiar"
+        app:layout_constraintVertical_bias="0.226" />
+
+    <TextView
+        android:id="@+id/lblResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.719"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
