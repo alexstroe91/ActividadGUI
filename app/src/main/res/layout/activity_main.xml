@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0C1D3A"
+    android:background="@drawable/fondo_personalizado"
     android:onClick="Calcular"
     tools:context=".MainActivity">
 
@@ -61,8 +61,8 @@
 
     <EditText
         android:id="@+id/txtDiasSemana"
-        android:layout_width="120dp"
-        android:layout_height="26dp"
+        android:layout_width="131dp"
+        android:layout_height="46dp"
         android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:foregroundTint="#00FFFFFF"
@@ -70,7 +70,7 @@
         android:maxLength="1"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
-        android:textSize="8sp"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.742"
@@ -82,14 +82,15 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
         android:text="Horas al dia"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/txtHorasDia"
-        app:layout_constraintEnd_toStartOf="@+id/txtHorasDia"
-        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintBottom_toBottomOf="@+id/txtHorasDias"
+        app:layout_constraintEnd_toStartOf="@+id/txtHorasDias"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtHorasDia"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/txtHorasDias"
+        app:layout_constraintVertical_bias="0.555" />
 
     <TextView
         android:id="@+id/textView5"
@@ -103,25 +104,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView4"
         app:layout_constraintVertical_bias="1.0" />
-
-    <EditText
-        android:id="@+id/txtHorasDia"
-        android:layout_width="120dp"
-        android:layout_height="26dp"
-        android:backgroundTint="#FFFFFF"
-        android:ems="10"
-        android:foregroundTint="#00FFFFFF"
-        android:inputType="textPersonName"
-        android:maxLength="2"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        android:textSize="8sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtDiasSemana"
-        app:layout_constraintEnd_toEndOf="@+id/txtDiasSemana"
-        app:layout_constraintHorizontal_bias="0.697"
-        app:layout_constraintStart_toStartOf="@+id/txtDiasSemana"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.47" />
 
     <Button
         android:id="@+id/btnLimpiar"
@@ -191,6 +173,7 @@
             android:id="@+id/rbnIntel"
             android:layout_width="match_parent"
             android:layout_height="32dp"
+            android:checked="true"
             android:text="Intel"
             android:textColor="#FFFFFF" />
 
@@ -236,6 +219,7 @@
             android:id="@+id/rbnOficina"
             android:layout_width="match_parent"
             android:layout_height="35dp"
+            android:checked="true"
             android:text="Oficina"
             android:textColor="#FFFFFF" />
     </RadioGroup>
@@ -275,5 +259,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView"
         app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/txtHorasDias"
+        android:layout_width="132dp"
+        android:layout_height="46dp"
+        android:backgroundTint="#F3EEEE"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.02"
+        tools:layout_editor_absoluteX="207dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

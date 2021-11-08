@@ -3,7 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/DAM2A/ProgramacionMoviles/ActividadGUI/app/src/main/res/layout/activity_main.xml" value="0.9" />
+        <entry key="..\:/DAM2A/ProgramacionMoviles/ActividadGUI/app/src/main/res/drawable/fondo_personalizado.xml" value="0.2911458333333333" />
+        <entry key="..\:/DAM2A/ProgramacionMoviles/ActividadGUI/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/Users/alexs/AndroidStudioProjects/ActividadGUI/app/src/main/res/layout/activity_main.xml" value="0.5" />
       </map>
     </option>

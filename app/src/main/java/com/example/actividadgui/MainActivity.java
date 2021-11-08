@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        txtHorasDia = (EditText) findViewById(R.id.txtHorasDia);
+        txtHorasDia = (EditText) findViewById(R.id.txtHorasDias);
         txtDiasSemana = (EditText) findViewById(R.id.txtDiasSemana);
         chkbRefrigeracion = (CheckBox) findViewById((R.id.chkbRefrigeracion));
         chkbLeds = (CheckBox) findViewById((R.id.chkbLeds));
@@ -43,6 +43,28 @@ public class MainActivity extends AppCompatActivity {
     public void Calcular(View v){
         int horas = Integer.parseInt(txtHorasDia.getText().toString());
         int dias = Integer.parseInt(txtDiasSemana.getText().toString());
+        int total = 0;
+
+        if (horas < 4 ){
+            total += 15;
+        } else if (horas > 4 && horas < 8){
+            total += 25;
+        } else if (horas > 8){
+            total += 35;
+        }
+
+        if (dias < 2){
+            total += 30;
+        } else if (dias > 2 && dias < 5){
+            total += 50;
+        } else {
+            total += 60;
+        }
+
+
+
+
+
         // video minuto 23:22
 
     }
