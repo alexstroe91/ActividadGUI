@@ -13,7 +13,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivityDumitruAlexStroe extends AppCompatActivity {
 
     private EditText txtHorasDia, txtDiasSemana;
     private CheckBox chkbRefrigeracion, chkbLeds;
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private RadioButton rbnGaming, rbnOficina, rbnIntel, rbnAmd;
     private Button btnCalcular, btnLimpiar;
     private TextView lblResultado, lblWatios;
-    int numHoras, numDias, intIntel, intAmd, intOficina, intGaming, intRefrig=0, intLeds=0;
+    int numHoras, numDias, intIntel, intAmd, intOficina, intGaming, intRefrig=0, intLeds=0, total;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,39 +49,39 @@ public class MainActivity extends AppCompatActivity {
         lblWatios.setVisibility(View.VISIBLE);
         int horas = Integer.parseInt(txtHorasDia.getText().toString());
         int dias = Integer.parseInt(txtDiasSemana.getText().toString());
-        int total = 0;
+        total = 0;
 
         horas = 0;
         dias = 0;
 
         if (horas < 4 ){
-            numHoras = 35;
-        } else if (horas > 4 && horas < 8){
-            numHoras = 45;
-        } else if (horas > 8){
             numHoras = 65;
+        } else if (horas > 4 && horas < 8){
+            numHoras = 75;
+        } else if (horas > 8){
+            numHoras = 95;
         }
 
         if (dias < 2){
-            numDias = 50;
+            numDias = 65;
         } else if (dias > 2 && dias < 5){
-            numDias = 70;
+            numDias = 80;
         } else {
-            numDias = 90;
+            numDias = 100;
         }
 
         if (rbnIntel.isChecked()){
-            intIntel = 50;
+            intIntel = 70;
         } else if (rbnAmd.isChecked()){
-            intAmd = 70;
+            intAmd = 90;
         }
 
         if (chkbRefrigeracion.isChecked()){
-            intRefrig = 20;
+            intRefrig = 40;
         }
 
         if (chkbLeds.isChecked()){
-            intLeds = 30;
+            intLeds = 60;
         }
 
         total = numHoras + numDias + intIntel + intAmd + intOficina + intGaming + intRefrig + intLeds + 200;
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
         if (rbnOficina.isChecked()){
             total = total;
         } else if (rbnGaming.isChecked()){
-            total += total * 0.15;
+            total += total * 0.2;
         }
 
         lblResultado.setText(String.format(String.valueOf(total)));
@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         lblWatios.setVisibility(View.INVISIBLE);
         txtHorasDia.setText("");
         txtDiasSemana.setText("");
-
+        total = 0;
     }
 
 }
