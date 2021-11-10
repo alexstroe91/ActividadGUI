@@ -2,6 +2,7 @@ package com.example.actividadgui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +11,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
     private RadioGroup rgroupUso, rgroupProcesador;
     private RadioButton rbnGaming, rbnOficina, rbnIntel, rbnAmd;
     private Button btnCalcular, btnLimpiar;
-    private TextView lblResultado;
+    private TextView lblResultado, lblWatios;
+    int numHoras, numDias, intIntel, intAmd, intOficina, intGaming, intRefrig=0, intLeds=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,34 +41,73 @@ public class MainActivity extends AppCompatActivity {
         btnCalcular = (Button) findViewById((R.id.btnCalcular));
         btnLimpiar = (Button) findViewById((R.id.btnLimpiar));
         lblResultado = (TextView) findViewById((R.id.lblResultado));
+        lblWatios = (TextView) findViewById(R.id.lblWatios);
     }
 
     public void Calcular(View v){
+
+        lblWatios.setVisibility(View.VISIBLE);
         int horas = Integer.parseInt(txtHorasDia.getText().toString());
         int dias = Integer.parseInt(txtDiasSemana.getText().toString());
         int total = 0;
 
+        horas = 0;
+        dias = 0;
+
         if (horas < 4 ){
-            total += 15;
+            numHoras = 35;
         } else if (horas > 4 && horas < 8){
-            total += 25;
+            numHoras = 45;
         } else if (horas > 8){
-            total += 35;
+            numHoras = 65;
         }
 
         if (dias < 2){
-            total += 30;
+            numDias = 50;
         } else if (dias > 2 && dias < 5){
-            total += 50;
+            numDias = 70;
         } else {
-            total += 60;
+            numDias = 90;
         }
 
+        if (rbnIntel.isChecked()){
+            intIntel = 50;
+        } else if (rbnAmd.isChecked()){
+            intAmd = 70;
+        }
+
+        if (chkbRefrigeracion.isChecked()){
+            intRefrig = 20;
+        }
+
+        if (chkbLeds.isChecked()){
+            intLeds = 30;
+        }
+
+        total = numHoras + numDias + intIntel + intAmd + intOficina + intGaming + intRefrig + intLeds + 200;
+
+        if (rbnOficina.isChecked()){
+            total = total;
+        } else if (rbnGaming.isChecked()){
+            total += total * 0.15;
+        }
+
+        lblResultado.setText(String.format(String.valueOf(total)));
 
 
+    }
 
-
-        // video minuto 23:22
+    public void limpiar(View v){
+        chkbRefrigeracion.setChecked(false);
+        chkbLeds.setChecked(false);
+        rbnAmd.setChecked(false);
+        rbnIntel.setChecked(false);
+        rbnGaming.setChecked(false);
+        rbnOficina.setChecked(false);
+        lblResultado.setText("");
+        lblWatios.setVisibility(View.INVISIBLE);
+        txtHorasDia.setText("");
+        txtDiasSemana.setText("");
 
     }
 

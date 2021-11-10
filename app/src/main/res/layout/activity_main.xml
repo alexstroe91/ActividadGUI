@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_personalizado"
-    android:onClick="Calcular"
     tools:context=".MainActivity">
 
     <TextView
@@ -82,12 +81,11 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
         android:text="Horas al dia"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/txtHorasDias"
         app:layout_constraintEnd_toStartOf="@+id/txtHorasDias"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.455"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txtHorasDias"
         app:layout_constraintVertical_bias="0.555" />
@@ -110,8 +108,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#FFFFFF"
-        android:onClick="Limpar"
         android:text="LIMPIAR"
+        android:onClick="limpiar"
         android:textColor="#2054EC"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/chkbLeds"
@@ -125,6 +123,7 @@
         android:layout_width="113dp"
         android:layout_height="46dp"
         android:backgroundTint="#FFFFFF"
+        android:onClick="Calcular"
         android:text="CALCULAR"
         android:textColor="#095CED"
         app:layout_constraintBottom_toBottomOf="@+id/btnLimpiar"
@@ -236,11 +235,12 @@
         app:layout_constraintTop_toTopOf="@+id/chkbLeds" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/lblWatios"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Watios"
         android:textColor="#FFFFFF"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.278"
@@ -253,11 +253,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintBottom_toBottomOf="@+id/lblWatios"
+        app:layout_constraintEnd_toStartOf="@+id/lblWatios"
         app:layout_constraintHorizontal_bias="0.719"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/lblWatios"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
@@ -268,8 +268,10 @@
         android:ems="10"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.749"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.02"
-        tools:layout_editor_absoluteX="207dp" />
+        app:layout_constraintVertical_bias="0.02" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
